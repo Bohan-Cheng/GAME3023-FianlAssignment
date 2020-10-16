@@ -12,4 +12,9 @@ public class Script_Menu : MonoBehaviour
     {
         SceneManager.LoadScene(StartMapName);
     }
+
+    public void OnQuitButtonPressed()
+    {
+        Application.Quit();
+    }
 }
