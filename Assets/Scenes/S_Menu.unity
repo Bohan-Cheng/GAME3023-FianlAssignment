@@ -1087,7 +1087,6 @@ GameObject:
   - component: {fileID: 471987383}
   - component: {fileID: 471987382}
   - component: {fileID: 471987381}
-  - component: {fileID: 471987384}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -1159,7 +1158,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 471987384}
+      - m_Target: {fileID: 1070971592}
         m_TargetAssemblyTypeName: Script_Menu, Assembly-CSharp
         m_MethodName: OnStartButtonPressed
         m_Mode: 1
@@ -1209,19 +1208,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471987379}
   m_CullTransparentMesh: 0
---- !u!114 &471987384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471987379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8d8ffc1873a7946b10f339591f0fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartMapName: Overworld
 --- !u!1 &653220789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1487,7 @@ GameObject:
   - component: {fileID: 1070971591}
   - component: {fileID: 1070971590}
   - component: {fileID: 1070971589}
+  - component: {fileID: 1070971592}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1556,6 +1543,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070971592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070971588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8d8ffc1873a7946b10f339591f0fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartMapName: Overworld
 --- !u!1 &1112365455
 GameObject:
   m_ObjectHideFlags: 0
@@ -4656,7 +4656,6 @@ GameObject:
   - component: {fileID: 1928218357}
   - component: {fileID: 1928218356}
   - component: {fileID: 1928218355}
-  - component: {fileID: 1928218354}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -4685,19 +4684,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -125.70462}
   m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1928218354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928218352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8d8ffc1873a7946b10f339591f0fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartMapName: Overworld
 --- !u!114 &1928218355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4741,7 +4727,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1928218354}
+      - m_Target: {fileID: 1070971592}
         m_TargetAssemblyTypeName: Script_Menu, Assembly-CSharp
         m_MethodName: OnQuitButtonPressed
         m_Mode: 1
