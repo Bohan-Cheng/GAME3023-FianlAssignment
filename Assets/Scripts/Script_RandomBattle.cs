@@ -9,7 +9,7 @@ public class Script_RandomBattle : MonoBehaviour
     [SerializeField] int MaxSteps = 30;
     [SerializeField] int EncounterStep = 0;
     [SerializeField] float CurrentStep = 0;
-    [SerializeField] bool ShouldCount = false;
+    public bool ShouldCount = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,20 +25,24 @@ public class Script_RandomBattle : MonoBehaviour
 
     public void AddStep()
     {
-        if(CurrentStep < EncounterStep)
+        if (ShouldCount)
         {
-            CurrentStep += 0.01f;
-        }
-        else
-        {
-            CurrentStep = 0;
-            EncounterStep = Random.Range(MinSteps, MaxSteps);
-            DoEncounter();
+            if (CurrentStep < EncounterStep)
+            {
+                CurrentStep += 0.01f;
+            }
+            else
+            {
+                CurrentStep = 0;
+                EncounterStep = Random.Range(MinSteps, MaxSteps);
+                DoEncounter();
+            }
         }
     }
 
     void DoEncounter()
     {
         SceneManager.LoadScene("Combat Scene");
+        gameObject.SetActive(false);
     }
 }

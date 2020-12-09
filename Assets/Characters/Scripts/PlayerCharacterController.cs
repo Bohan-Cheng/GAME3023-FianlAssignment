@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerCharacterController : MonoBehaviour
 {
-    List<int> wew;
-
     [SerializeField]
     float speed = 5;
 
