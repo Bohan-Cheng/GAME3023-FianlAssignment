@@ -16,6 +16,10 @@ public class PlayerCharacterController : MonoBehaviour
     void Update()
     {
         Vector2 movementVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if(rigidBody.velocity.magnitude > 0.5f)
+        {
+            GetComponent<Script_RandomBattle>().AddStep();
+        }
         movementVector *= speed;
         rigidBody.velocity = movementVector;
     }
