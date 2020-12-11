@@ -19,6 +19,10 @@ public class PlayerCharacterController : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         anim = GetComponent<Animator>();
+        if (PlayerPrefs.GetFloat("PosX") != 0 && PlayerPrefs.GetFloat("PosY") != 0)
+        {
+            transform.position = new Vector2(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"));
+        }
     }
 
     // Update is called once per frame
@@ -49,5 +53,8 @@ public class PlayerCharacterController : MonoBehaviour
         }
         movementVector *= speed;
         rigidBody.velocity = movementVector;
+
+        PlayerPrefs.SetFloat("PosX", transform.position.x);
+        PlayerPrefs.SetFloat("PosY", transform.position.y);
     }
 }

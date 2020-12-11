@@ -8,14 +8,19 @@ public class Script_PlayerAbilities : MonoBehaviour
     [SerializeField] ParticleSystem PE_Burn;
     [SerializeField] ParticleSystem PE_ToxicRain;
     [SerializeField] ParticleSystem PE_Heal;
+    [SerializeField] AudioClip SE_Fireball;
+    [SerializeField] AudioClip SE_Rain;
+    [SerializeField] AudioClip SE_Heal;
     [SerializeField] Script_HealhInfo EnemyInfo;
     [SerializeField] Script_HealhInfo PlayerInfo;
     private Script_BattleManager BM;
+    private AudioSource Audio;
     private float currentDmg;
 
     private void Start()
     {
         BM = GetComponent<Script_BattleManager>();
+        Audio = GetComponent<AudioSource>();
     }
 
     public void Fireball()
@@ -24,8 +29,10 @@ public class Script_PlayerAbilities : MonoBehaviour
         {
             BM.DoneTurn("You used Fireball!");
             PE_Fireball.Play();
+            Audio.clip = SE_Fireball;
+            Audio.Play();
             Invoke("Burnning", 1.2f);
-            currentDmg = 20;
+            currentDmg = 10;
             Invoke("DoDmg", 1.2f);
         }
     }
@@ -36,7 +43,9 @@ public class Script_PlayerAbilities : MonoBehaviour
         {
             BM.DoneTurn("You used Toxic Rain!");
             PE_ToxicRain.Play();
-            currentDmg = 30;
+            Audio.clip = SE_Rain;
+            Audio.Play();
+            currentDmg = 18;
             Invoke("DoDmg", 1.2f);
         }
     }
@@ -47,7 +56,9 @@ public class Script_PlayerAbilities : MonoBehaviour
         {
             BM.DoneTurn("You Healed!");
             PE_Heal.Play();
-            PlayerInfo.health += 50;
+            Audio.clip = SE_Heal;
+            Audio.Play();
+            PlayerInfo.health += 30;
         }
     }
 
@@ -58,6 +69,6 @@ public class Script_PlayerAbilities : MonoBehaviour
 
     void DoDmg()
     {
-        EnemyInfo.health -= currentDmg;
+        EnemyInfo.health -= currentDmg + Random.Range(0, 5);
     }
 }

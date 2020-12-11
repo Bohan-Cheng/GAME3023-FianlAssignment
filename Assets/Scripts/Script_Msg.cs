@@ -5,8 +5,7 @@ using UnityEngine.Assertions;
 
 public class Script_Msg : MonoBehaviour
 {
-    [SerializeField]
-    TMPro.TextMeshProUGUI text;
+    public TMPro.TextMeshProUGUI text;
 
     [SerializeField] string StartMsg;
 

@@ -17,7 +17,7 @@ public class Script_HealhInfo : MonoBehaviour
         if(health <= 0)
         {
             health = 0;
-            msg.AnimateText("Battle Ended!");
+            msg.text.text = "Battle Ended!";
             Invoke("EndBattle", 3.0f);
         }
         if(health >= 100)

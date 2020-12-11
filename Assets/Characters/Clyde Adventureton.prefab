@@ -583,8 +583,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anim_Flash: {fileID: 731751069}
-  MinSteps: 10
-  MaxSteps: 30
+  MinSteps: 3
+  MaxSteps: 10
   ShouldCount: 0
 --- !u!114 &2146304074
 MonoBehaviour:
