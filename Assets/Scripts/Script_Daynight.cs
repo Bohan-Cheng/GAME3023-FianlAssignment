@@ -21,27 +21,13 @@ public class Script_Daynight : MonoBehaviour
     {
         if (!ReachedDay)
         {
-            if (light.intensity < MaxIntensity)
-            {
-                light.intensity += TimeSpeed/100;
-            }
-            else
-            {
-                ReachedDay = true;
-            }
+            if (light.intensity < MaxIntensity) { light.intensity += TimeSpeed/100; }
+            else { ReachedDay = true; }
         }
-        else
-        {
-            if (light.intensity > MinIntensity)
-            {
-                light.intensity -= TimeSpeed/100;
-            }
-            else
-            {
-                ReachedDay = false;
-            }
+        else{
+            if (light.intensity > MinIntensity) { light.intensity -= TimeSpeed/100; }
+            else { ReachedDay = false; }
         }
-
 
     }
 }

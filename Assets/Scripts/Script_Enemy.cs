@@ -15,10 +15,22 @@ public class Script_Enemy : MonoBehaviour
     [SerializeField] ParticleSystem PE_Heal;
     private AudioSource Audio;
     private float currentDmg;
+    private float BaseDmg = 5;
+    [SerializeField] Sprite[] Sprites;
+    private SpriteRenderer SR;
 
     private void Start()
     {
         Audio = GetComponent<AudioSource>();
+        SR = GetComponent<SpriteRenderer>();
+        RandomEnemy();
+    }
+
+    void RandomEnemy()
+    {
+        int randInt = Random.Range(0, Sprites.Length);
+        SR.sprite = Sprites[randInt];
+        BaseDmg = Random.Range(5, 15);
     }
 
     void ShootBullet()
@@ -72,6 +84,6 @@ public class Script_Enemy : MonoBehaviour
 
     void ApplyDmg()
     {
-        PlayerHealth.health -= currentDmg + Random.Range(0, 5);
+        PlayerHealth.health -= currentDmg + Random.Range(0, BaseDmg);
     }
 }

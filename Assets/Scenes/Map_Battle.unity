@@ -1132,6 +1132,7 @@ MonoBehaviour:
   HPBar: {fileID: 1027058778}
   msg: {fileID: 2074682313}
   health: 100
+  IsPlayer: 1
 --- !u!1 &586069665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1317,12 @@ MonoBehaviour:
   SE_Pine: {fileID: 8300000, guid: 848af9e8faedd5644b9a1e4f517434d4, type: 3}
   SE_Heal: {fileID: 8300000, guid: b10fe636efb7e624fb655539bf73d11b, type: 3}
   PE_Heal: {fileID: 2100156864}
+  Sprites:
+  - {fileID: 21300000, guid: 30188f3aeab370046afaf2b34de91126, type: 3}
+  - {fileID: 21300000, guid: 669c9330acb805c4cb9e2cde94910312, type: 3}
+  - {fileID: 21300000, guid: b9dfa7d93fd8b014e997c9f6098ca65d, type: 3}
+  - {fileID: 21300000, guid: 8b0ade4fb252d6541b5cea07e75ab43f, type: 3}
+  - {fileID: 21300000, guid: 84d859944fe34ed4aad71569b3e06ddb, type: 3}
 --- !u!114 &699268842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,6 +1338,7 @@ MonoBehaviour:
   HPBar: {fileID: 1744490195}
   msg: {fileID: 2074682313}
   health: 100
+  IsPlayer: 0
 --- !u!82 &699268843
 AudioSource:
   m_ObjectHideFlags: 0
