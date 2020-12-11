@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Script_RandomBattle : MonoBehaviour
 {
+    [SerializeField] Animation Anim_Flash;
+
     [SerializeField] int MinSteps = 10;
     [SerializeField] int MaxSteps = 30;
-    [SerializeField] int EncounterStep = 0;
-    [SerializeField] float CurrentStep = 0;
+    private int EncounterStep = 0;
+    private float CurrentStep = 0;
     public bool ShouldCount = false;
+
+    private Vector2 LastPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +22,9 @@ public class Script_RandomBattle : MonoBehaviour
         EncounterStep = Random.Range(MinSteps, MaxSteps);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLastPosition()
     {
-        
+        gameObject.transform.position = LastPosition;
     }
 
     public void AddStep()
@@ -42,7 +46,15 @@ public class Script_RandomBattle : MonoBehaviour
 
     void DoEncounter()
     {
-        SceneManager.LoadScene("Combat Scene");
-        gameObject.SetActive(false);
+        GetComponentInParent<PlayerCharacterController>().IsPaused = true;
+        LastPosition = gameObject.transform.position;
+        Anim_Flash.Play();
+        Invoke("StopFlash", 1.5f);
+    }
+
+    void StopFlash()
+    {
+        Anim_Flash.Stop();
+        SceneManager.LoadScene("Map_Battle");
     }
 }

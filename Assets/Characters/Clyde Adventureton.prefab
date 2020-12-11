@@ -1,5 +1,97 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &731751065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731751066}
+  - component: {fileID: 731751068}
+  - component: {fileID: 731751067}
+  - component: {fileID: 731751069}
+  m_Layer: 5
+  m_Name: SceneCover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &731751066
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731751065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1226377641052313131}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &731751068
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731751065}
+  m_CullTransparentMesh: 0
+--- !u!114 &731751067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731751065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!111 &731751069
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731751065}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 753a735d63722ef43ad5f0b12d8db513, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 753a735d63722ef43ad5f0b12d8db513, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &2554492234778699953
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +257,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1924362699765281849}
+  - {fileID: 731751066}
   m_Father: {fileID: 9054669088864335008}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -278,9 +371,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.581
+  m_FalloffIntensity: 0.8
   m_Color: {r: 1, g: 0.9370908, b: 0.572327, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 2fb7d289000000004df6be5b
   m_LightCookieSprite: {fileID: 0}
@@ -291,8 +384,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1.94
-  m_PointLightOuterRadius: 7.56
+  m_PointLightInnerRadius: 2
+  m_PointLightOuterRadius: 8
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -315,12 +408,12 @@ GameObject:
   m_Component:
   - component: {fileID: 9054669088864335008}
   - component: {fileID: 9054669088864335009}
-  - component: {fileID: 9054669088864335006}
+  - component: {fileID: 9141444729743407701}
   - component: {fileID: 9054669088864335011}
   - component: {fileID: 9054669088864335010}
-  - component: {fileID: 9054669088864335013}
+  - component: {fileID: 9054669088864335006}
   - component: {fileID: 1809409265466055998}
-  - component: {fileID: 9141444729743407701}
+  - component: {fileID: 2146304074}
   m_Layer: 0
   m_Name: Clyde Adventureton
   m_TagString: Player
@@ -396,20 +489,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &9054669088864335006
-MonoBehaviour:
+--- !u!95 &9141444729743407701
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9054669088864335007}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69a123b113496e54693d602bd76cd399, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  rigidBody: {fileID: 9054669088864335011}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de131c45f6874754d8ebb7517536aed0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &9054669088864335011
 Rigidbody2D:
   serializedVersion: 4
@@ -457,7 +555,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6946828, y: 0.33762848}
   m_EdgeRadius: 0
---- !u!114 &9054669088864335013
+--- !u!114 &9054669088864335006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -466,9 +564,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 9054669088864335007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46a88176a6ee5f94e94cd12f793f1563, type: 3}
+  m_Script: {fileID: 11500000, guid: 69a123b113496e54693d602bd76cd399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 3
+  rigidBody: {fileID: 9054669088864335011}
+  IsPaused: 0
 --- !u!114 &1809409265466055998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,30 +582,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69e6fce4a3dde64f95723140cc03c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Anim_Flash: {fileID: 731751069}
   MinSteps: 10
   MaxSteps: 30
-  EncounterStep: 0
-  CurrentStep: 0
   ShouldCount: 0
---- !u!95 &9141444729743407701
-Animator:
-  serializedVersion: 3
+--- !u!114 &2146304074
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9054669088864335007}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: de131c45f6874754d8ebb7517536aed0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a88176a6ee5f94e94cd12f793f1563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9054669090660426685
 GameObject:
   m_ObjectHideFlags: 0
